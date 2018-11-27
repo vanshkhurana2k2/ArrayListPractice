@@ -9,6 +9,9 @@ public class ArrayListPractice{
 		list1.add(4);	list2.add(9);
 		list1.add(5);	list2.add(10);
 		System.out.println(combineLists(list1, list2));
+		System.out.println();
+		printList(list1);
+		System.out.println();
 	}
 	public static ArrayList <Integer> combineLists(ArrayList <Integer> firstList, ArrayList <Integer> secondList){
 		ArrayList <Integer> combinedList = new ArrayList <> ();
@@ -17,5 +20,14 @@ public class ArrayListPractice{
 		for(int i = 0; i < secondList.size(); i++)
 			combinedList.add(secondList.get(i));
 		return combinedList;
+	}
+	public static void printList(ArrayList <Integer> theList){
+		for(int i = 0; i < theList.size(); i++){
+			if(i == theList.size() - 1){
+				System.out.print(theList.get(i));
+			}
+			else
+				System.out.print(theList.get(i) + ", ");
+		}
 	}
 }
